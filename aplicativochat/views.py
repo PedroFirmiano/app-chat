@@ -6,10 +6,10 @@ from rest_framework import permissions
 from .defSocket import messagem_socket
 
 
-class Sessao(APIView):
+class Sessao(APIView): #herença
     permission_classes = (permissions.AllowAny,)
 
-    def post(self, request, pk):
+    def post(self, request):
         sala = self.kwargs["pk"]
         
         data = self.request.data
@@ -19,8 +19,8 @@ class Sessao(APIView):
         
         # mensagem = Mensagem(enviadoPor = 'Pedro', mensagem = "Acorda pedrinho", sala = "minha_e_do_pedro")
         # mensagem.save()
-        body = {'usuario':usuario, 'mensagem':mensagem}
 
+        body = {'usuario':usuario, 'mensagem':mensagem}
         messagem_socket('NOVA_MENSAGEM', sala, body)
 
 
