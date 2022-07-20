@@ -1,12 +1,12 @@
 # app-chat
 aplicativo de chat com django e web socket
 
-#Para rodar o app
+# Para rodar o app
 
 - Instale [python](https://www.python.org/downloads/)
 
 
-#Inicialização
+# Inicialização
 
 1 - iniciando um ambiente virtual (venv)
 
