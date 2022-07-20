@@ -1,6 +1,8 @@
 # app-chat
 aplicativo de chat com django e web socket
 
+front-end se encontra no repositorio: https://github.com/hugoiandev/chat-web
+
 # Para rodar o app
 
 - Instale [python](https://www.python.org/downloads/)
