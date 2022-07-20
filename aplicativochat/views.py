@@ -1,7 +1,6 @@
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny
 from rest_framework import permissions
 from .defSocket import messagem_socket
 
@@ -9,7 +8,7 @@ from .defSocket import messagem_socket
 class Sessao(APIView): #herença
     permission_classes = (permissions.AllowAny,)
 
-    def post(self, request):
+    def post(self, request, pk):
         sala = self.kwargs["pk"]
         
         data = self.request.data
